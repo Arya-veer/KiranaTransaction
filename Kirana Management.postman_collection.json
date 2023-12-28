@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "6c9f34bc-2cff-410a-aa61-dcc12f55252f",
+		"name": "Kirana Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16611152"
+	},
+	"item": [
+		{
+			"name": "Create Transaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"currency\":\"INR\",\r\n    \"amount\":100.0,\r\n    \"type\":\"CREDIT\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/transaction/create/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transaction",
+						"create",
+						""
+					]
+				},
+				"description": "This api creates a new transaction"
+			},
+			"response": []
+		},
+		{
+			"name": "List Transactions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/transaction/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transaction",
+						"list"
+					]
+				},
+				"description": "This api gets all the transactions"
+			},
+			"response": []
+		},
+		{
+			"name": "Transaction By Date",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/transaction/byDate?date=2023-12-27",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transaction",
+						"byDate"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "2023-12-27"
+						}
+					]
+				},
+				"description": "This API takes date as query param and returns all transactoin on the date"
+			},
+			"response": []
+		},
+		{
+			"name": "Debit Transactions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/transaction/debit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transaction",
+						"debit"
+					]
+				},
+				"description": "This API gives all Debit Transactions"
+			},
+			"response": []
+		},
+		{
+			"name": "Credit Transactions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/transaction/credit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transaction",
+						"credit"
+					]
+				},
+				"description": "This API returns all Credit Transactions"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Transaction By ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/transaction/delete/78728741-6bc0-4eed-b913-6a37497f6bd2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transaction",
+						"delete",
+						"78728741-6bc0-4eed-b913-6a37497f6bd2"
+					]
+				},
+				"description": "This API deletes a transaction by ID"
+			},
+			"response": []
+		}
+	]
+}
